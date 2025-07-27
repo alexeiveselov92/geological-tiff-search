@@ -12,7 +12,7 @@ CHUNK_OVERLAP = 200
 
 MAX_TOKENS_CONTEXT = 8000
 
-# EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 # EMBEDDING_MODEL = "ai-forever/sbert_large_nlu_ru"
 
 DATA_PATHS = {
