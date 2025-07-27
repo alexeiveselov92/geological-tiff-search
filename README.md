@@ -26,7 +26,7 @@ cp /путь/к/вашим/архивам/*.zip tiff_reports/
 
 Структура должна выглядеть так:
 ```
-geo/
+geological-tiff-search/
 ├── tiff_reports/
 │   ├── архив1.zip
 │   ├── архив2.zip
@@ -145,13 +145,13 @@ python test_rag.py
 ## 📁 Структура проекта
 
 ```
-geo/
+geological-tiff-search/
 ├── ask_geo.py              # 🎯 Главный интерфейс для пользователей
-├── test_search.py          # 🔍 Тестирование поиска
-├── test_rag.py            # 🤖 Тестирование RAG системы
+├── process_archives.py     # 🔄 Главный pipeline обработки архивов
 ├── requirements.txt        # 📦 Зависимости Python
 ├── .env                   # 🔑 API ключи (создайте сами)
 ├── README.md              # 📖 Эта инструкция
+├── .gitignore             # 🚫 Исключения для Git
 │
 ├── src/                   # 💻 Исходный код
 │   ├── config.py          # ⚙️ Конфигурация
@@ -161,15 +161,17 @@ geo/
 │   ├── search_engine.py   # 🔍 Поисковая система
 │   └── rag_system.py      # 🤖 RAG система
 │
-├── data/                  # 💾 Обработанные данные
+├── tests/                 # 🧪 Тесты
+│   ├── test_rag.py        # 🤖 Тестирование RAG системы
+│   └── test_search.py     # 🔍 Тестирование поиска
+│
+├── data/                  # 💾 Обработанные данные (создается автоматически)
 │   ├── extracted_files/   # 📁 Извлеченные из архивов TIFF файлы
 │   ├── extracted_text/    # 📄 Тексты из OCR
 │   ├── processed_chunks/  # 📋 Разбитые на фрагменты
 │   └── embeddings/        # 🧠 Векторные представления + индекс
 │
-├── tiff_reports/          # 📷 ⚠️ СЮДА КЛАДИТЕ ZIP АРХИВЫ С ОТЧЕТАМИ
-├── process_archives.py    # 🔄 Главный pipeline обработки архивов
-└── test_files/           # 🧪 Тестовые файлы
+└── tiff_reports/          # 📷 ⚠️ СЮДА КЛАДИТЕ ZIP АРХИВЫ С ОТЧЕТАМИ
 ```
 
 ## 🔧 Технические детали
