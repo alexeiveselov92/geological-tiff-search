@@ -22,7 +22,9 @@ class ArchiveProcessor:
     def scan_archives(self) -> List[Path]:
         """Сканирование архивов в папке tiff_reports/"""
         if not self.archives_dir.exists():
-            logger.error(f"Папка {self.archives_dir} не найдена")
+            logger.info(f"Создаю папку {self.archives_dir}")
+            self.archives_dir.mkdir(parents=True, exist_ok=True)
+            logger.warning(f"Папка {self.archives_dir} была пуста. Поместите ZIP архивы в эту папку и запустите снова.")
             return []
             
         zip_files = list(self.archives_dir.glob("*.zip"))
